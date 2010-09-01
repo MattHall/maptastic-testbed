@@ -1,0 +1,18 @@
+<% semantic_form_for @user do |f| %>
+	<%= f.error_messages %>
+	<%= f.input :name %>
+	
+	<% f.semantic_fields_for :location do |l| %>
+		<%= l.input :name %>
+		<%= l.multi_input :latitude, :longitude, :as => :map %>
+	<% end %>
+	
+	
+	<% f.semantic_fields_for :alt_location do |l| %>
+		<%= l.input :name %>
+		<%= l.multi_input :latitude, :longitude, :as => :map %>
+	<% end %>
+	
+	
+	<%= f.commit_button %>
+<% end %>

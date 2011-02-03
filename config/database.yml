@@ -1,0 +1,4 @@
+development:
+  adapter: sqlite3
+  database: db/db_development
+  timeout: 5000
